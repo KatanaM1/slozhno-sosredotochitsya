@@ -1,1 +1,1 @@
-git@github.com:KatanaM1/slozhno-sosredotochitsya.git
+https://github.com/KatanaM1/slozhno-sosredotochitsya.git

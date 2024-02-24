@@ -1,5 +1,460 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  font-size: var(--text-size);
+  font-family: var(--font-family);
+  line-height: var(--text-height);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+.header {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: center;
+  min-inline-size: 375px;
+  box-sizing: border-box;
+  padding: 10px;
+  gap: 41px;
+}
+.header__theme-menu {
+  grid-row: auto;
+  justify-self: end;
+  align-self: center;
+  padding-top: 33px;
+}
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px;
+}
+.header__theme-menu-item {
+  line-height: 100%;
+}
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+  inset-block-end: 16px;
+  inset-inline-start: 10px;
+}
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;;
+  inset-inline-end: 10px;
+  inset-block-start: 3px;
+}
+.decor-rec {
+  position: absolute;
+  display: block;
+  inset-block-start: 10px;
+  inset-inline-end: 17px;
+  display: flex;
+  gap: 7px;
+}
+.decor-rec::before {
+  content:"REC";
+  color: var(--accent-color);
+  display: inline-block;
+  font-size: 18px;
+  line-height: 10px;
+  font-weight: var(--accent-family);
+}
+.decor-rec::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--accent-color);
+  background: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+.header__theme-menu-button {
+  border: none;
+  text-transform: lowercase;
+  font-size: var(--text-size);
+  background-color: transparent;
+  border: 0;
+  color: var(--button-color);
+  font-family: var(--accent-family);
+  font-weight: normal;
+}
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color);
+}
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+  outline: none;
+}
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--button-focus-line-color);
+}
+.text__link:focus {
+  outline: none;
+}
+.text__link:hover {
+  cursor: pointer;
+  border-bottom: 1px solid var(--section-text-color);
+}
+.text__link:focus-visible {
+  outline: 1px solid var(--section-text-color);
+}
+.focus-decor {
+  font-size: var(--header-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  font-family: var(--accent-family);
+}
+.position__header-focus {
+  padding-bottom: 12px;
+}
+.header__tittle-text {
+  block-size: 117px;
+  display: flex;
+  justify-content: flex-end;
+}
+.tittle-text {
+  font-size: var(--text-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-family: var(--accent-family);
+}
+.main {
+  padding-top: 22px;
+}
+.content {
+  padding: 10px;
+  font-family: var(--accent-family);
+  font-size: var(--text-size);
+  line-height: 23.4px;
+  display: grid;
+  gap: 45px;
+}
+.content-concetration {
+  display: grid;
+  gap: 16px;
+  font-size: var(--text-size);
+  font-family: var(--font-family);
+  line-height: var(--text-height);
+}
+.content__section-quest {
+  display: grid;
+  gap: 15px;
+}
+.head-content {
+  font-family: var(--accent-family);
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--text-size);
+  line-height: 23.4px;
+}
+.concetration__gold-fisch {
+  display: grid;
+  gap: 22px;
+  padding-top: 5px;
+}
+.concetrtion__rules {
+  display: grid;
+  gap: 15px;
+}
+.head__concetration {
+  font-weight: 400;
+}
+.heading-size {
+  font-size: var(--text-size);
+}
+.text-decoration {
+  color: var(--content-text);
+}
+.background-text {
+  background-color: var(--accent-color);
+}
+.content__color-text {
+  color: var(--head-color);
+}
+.gallery_full {
+  grid-template-columns: 100%;
+  padding: 40px 10px;
+  font-weight: 700;
+}
+.sunset {
+  grid-area: sunset;
+}
+.icecream {
+  grid-area: icecream;
+}
+.tape {
+  grid-area: tape;
+}
+.book {
+  grid-area: book;
+}
+.street {
+  grid-area: street;
+}
+.img__gallery {
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.img__gallery {
+  padding-top: 5px;
+}
+.footer {
+  position: relative;
+  block-size: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 19px;
+  padding-left: 10px;
+}
+.footer__focus {
+  font-size: var(--header-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  font-family: var(--accent-family);
+  font-weight: bold;
+  object-position: center;
+}
+.footer__decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+  inset-block-end: 22px;
+  inset-inline-start: 10px;
+}
+.footer__decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;;
+  inset-inline-end: 10px;
+  inset-block-start: 1px;
+}
+@media (375px < width <= 768px) {
+  .header {
+    grid-template-columns: repeat(auto-fill, 728px);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh; 
+    min-height: 668px;
+  }
+  .focus-decor {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
+    padding-top: 97px;
+  }
+  .decor-rec {
+    top: 20px;
+    right: 30px;
+  }
+  .header__theme-menu {
+    padding-top: 120px;
+  }
+  .decorated-zone::after {
+    inset-inline-end: 20px;
+    inset-block-start: 13px;
+  }
+  .decorated-zone::before {
+    inset-block-end: 26px;
+    inset-inline-start: 19px;
+  }
+  .footer__decorated-zone::after {
+    inset-block-start: 29px;
+  }
+  .footer__decorated-zone::before {
+    inset-block-end: 12px;
+  }
+  .tittle-text {
+    inline-size: 50%;
+  }
+  .main {
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, 728px);
+    padding-top: 39px;
+  }
+  .content-concetration-first {
+    display: grid; 
+    grid-template-rows: repeat(min-content);
+    grid-template-columns: 230px 472px;
+    gap: 13px 27px;
+  }
+  #item-1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 6;
+    grid-column-end: 2;
+  }
+  .content-concetration-thrid {
+    display: grid;
+    padding-top: 24px;
+  }
+  #item-2 {
+    inline-size: 20%;
+  }
+  .concetration__gold-fisch {
+    padding-top: 25px;
+    display: grid;
+    grid-template-rows: repeat(min-content);
+    grid-template-columns: 236px 472px ;
+  }
+  .concetrtion__rules {
+    padding-top: 5px;
+  }
+  .gallery_full {
+    padding-top: 70px;
+  }
+  .gallery__img-full {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    'sunset sunset icecream'
+    'tape book icecream'
+    'tape street street' ;
+    gap: 15px;
+  }
+  .footer__focus {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-top: 45px;
+  }
+}
+@media ( width >= 1024px ) {
+  .footer__decorated-zone::after {
+    inset-block-start: 29px;
+  }
+  .decor-rec {
+    inset-block-start: 59px;
+    inset-inline-end: 28px;
+}
+  .decorated-zone::after {
+    inset-inline-end: 20px;
+    inset-block-start: 52px;
+  }
+  .decorated-zone::before {
+    margin-left: 10px;
+    inset-block-start: 755px;
+  }
+  .page {
+    padding: 0px;
+  }
+  .header {
+    margin-top: -20px;
+    grid-template-columns: repeat(auto-fill, 1024px);
+  }
+  .position__header-focus {
+    padding-top: 70px;
+  }
+  .header__theme-menu {
+    grid-row: auto;
+    justify-self: center;
+    align-self: start;
+  }
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+  .position__header-focus {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header__tittle-text {
+    grid-row: auto;
+    align-self: center;
+    inline-size: calc(50% - 20px);
+    justify-self: end;
+    block-size: min-content;
+    margin-block-start: -23px;
+    margin-inline-end: 20px;
+  }
+  .content-concetration-first {
+    display: grid; 
+    grid-template-rows: repeat(min-content);
+    grid-template-columns: 335px 649px;
+    gap: 13px 1px;
+  }
+  #item-1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 6;
+    grid-column-end: 2;
+  }
+  .content-concetration-first {
+    padding: 60px 0px 0px 8px;
+  }
+  .content-concetration-thrid {
+    padding: 22px 0px 0px 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+  #item-2 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 4;
+    inline-size: 30%;
+  }
+  .content__section-quest {
+    display: grid;
+    grid-template-rows: 23px 370px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .concetration__gold-fisch {
+    display: grid;
+    grid-template-rows: repeat(min-content);
+    grid-template-columns: 316px 650px;
+    padding-left: 5px;
+    padding-top: 60px;
+  }
+  .gallery_full {
+    padding: 72px 21px 0px 16px;
+  }
+  .gallery__img-full {
+    padding-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    'sunset sunset icecream'
+    'tape book icecream'
+    'tape street street' ;
+    gap: 18px;
+  }
+  .footer {
+    padding-top: 130px;
+  }
+  .footer__decorated-zone::after {
+    inset-block-start: 75px;
+    inset-inline-end: 23px;
+  }
+  .footer__decorated-zone::before {
+    margin-left: 10px;
+    inset-block-start: 779px;
+  }
 }
