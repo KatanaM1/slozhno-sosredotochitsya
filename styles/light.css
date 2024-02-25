@@ -3,28 +3,36 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root .theme_light {
-  --accent-color: #ff8dcb;
-  --header-color: #ffc2e6;
-  --button-color: #353430;
-  --background-image: url(../images/cover-image-light.png);
-  --head-color: #353430;
-  --content-text: #353430;
-}
 
 .page.theme_light {
-  background-image: var(--background-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  .page.theme_light {
+    --main-text-color: #353430;
+    --title-color: #ffc2e6;
+    --title-shadow: #ff0070;
+    --title-decor: #ff8dcb;
+    --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+    --background-color: #fff1f7;
+    --background-image: url(../images/cover-image-light.png);
+    --article-title-color: var(--main-text-color);
+    --section-title-color: var(--main-text-color);
+    --border-color: var(--title-shadow);
+    --corners-color: var(--main-text-color);
+    --link-shadow: var(--title-color);
+    --rec-color: var(--background-color);
+  }
+
+  .page.theme_light .header__rec {
+    display: none;
+  }
+
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 }
-.theme_light .decor-rec {
-  display: none;
-}
-.theme_light .decorated-zone {
-  
+
+
+
+:root {
+  --accent-color: #ff8dcb;
 }
