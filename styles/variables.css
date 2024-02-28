@@ -8,8 +8,8 @@
   --header-color: #db00ff;
   --text-color: #000028;
   --section-text-color: #f1b2ce;
-  --header-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --accent-family: 'IBM Plex Mono', 'sans-serif';
+  --header-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --accent-family: 'IBM Plex Mono', sans-serif;
   --button-color: #ff0070;
   --text-height: 23.4px;
   --background-image: url(../images/cover-image-dark.png);
@@ -17,4 +17,6 @@
   --content-text: #F1B2CE;
   --decor-color: #ff0070;
   --color-head: #000028;
+  --shadow-color: #FF0070;
+  --visiblity: visible;
 }

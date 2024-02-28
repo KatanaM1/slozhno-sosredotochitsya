@@ -12,15 +12,27 @@
   --content-text: #353430;
   --decor-color: #353430;
   --color-head: #353430;
+  --color-all-body: #FFF1F7;
+  --shadow-color: #FF0070;
+  --color-button: rgba(50, 49, 45, 0.40);
+  --visiblity: hidden;
 }
 
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+@media (prefers-color-scheme: light) {
+  :root {  
+    --accent-color: #ff8dcb;
+    --header-color: #ffc2e6;
+    --button-color: #353430;
+    --background-image: url(../images/cover-image-light.png);
+    --head-color: #353430;
+    --content-text: #353430;
+    --decor-color: #353430;
+    --color-head: #353430;
+    --color-all-body: #FFF1F7;
+    --shadow-color: #FF0070;
+    --color-button: rgba(50, 49, 45, 0.40);
+    --visiblity: hidden;
+  }
+
 }
 
-.theme_light .decor-rec {
-  display: none;
-}
