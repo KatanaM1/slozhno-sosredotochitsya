@@ -6,7 +6,7 @@
 :root .theme_light {
   --accent-color: #ff8dcb;
   --header-color: #ffc2e6;
-  --button-color: #353430;
+  --link-color: #353430;
   --background-image: url(../images/cover-image-light.png);
   --head-color: #353430;
   --content-text: #353430;
@@ -16,13 +16,15 @@
   --shadow-color: #FF0070;
   --color-button: rgba(50, 49, 45, 0.40);
   --visiblity: hidden;
+  --active-button-color: #353430;
+  --color-link-visible: #353430;
 }
 
 @media (prefers-color-scheme: light) {
   :root {  
     --accent-color: #ff8dcb;
     --header-color: #ffc2e6;
-    --button-color: #353430;
+    --link-color: #353430;
     --background-image: url(../images/cover-image-light.png);
     --head-color: #353430;
     --content-text: #353430;
@@ -32,6 +34,8 @@
     --shadow-color: #FF0070;
     --color-button: rgba(50, 49, 45, 0.40);
     --visiblity: hidden;
+    --active-button-color: #353430;
+    --color-link-visible: #353430;
   }
 
 }

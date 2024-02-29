@@ -13,7 +13,7 @@
   --header-color: #db00ff;
   --text-color: #000028;
   --section-text-color: #f1b2ce;
-  --button-color: #ff0070;
+  --link-color: #ff0070;
   --text-height: 23.4px;
   --background-image: url(../images/cover-image-dark.png);
   --head-color: #ff0070;
@@ -24,6 +24,8 @@
   --shadow-color: #FF0070;
   --color-button: rgba(255, 0, 112, 0.40);
   --visiblity: visible;
+  --active-button-color: #FF0070;
+  --color-link-visible: #F1B2CE;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -33,7 +35,7 @@
       --header-color: #db00ff;
       --text-color: #000028;
       --section-text-color: #f1b2ce;
-      --button-color: #ff0070;
+      --link-color: #ff0070;
       --text-height: 23.4px;
       --background-image: url(../images/cover-image-dark.png);
       --head-color: #ff0070;
@@ -44,5 +46,7 @@
       --shadow-color: #FF0070;
       --color-button: rgba(255, 0, 112, 0.40);
       --visiblity: visible;
+      --active-button-color: #FF0070;
+      --color-link-visible: #F1B2CE;
     }
   }

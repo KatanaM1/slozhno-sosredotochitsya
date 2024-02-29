@@ -7,10 +7,10 @@
   font-size: var(--text-size);
   font-family: var(--accent-family);
   line-height: var(--text-height);
-  display: grid;
-  gap: 30px;
   color: var(--content-text);
   background-color: var(--color-all-body);
+  display: grid;
+  gap: 40px;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -18,13 +18,12 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  grid-template-columns: 1fr;
   grid-template-areas:
   'button'
   'focus'
-  'text';
+  'tittle';
+  align-items: start;
   padding: 10px;
-  gap: 57px;
   height: 100vh;
   min-height: 668px;
 }  
@@ -33,7 +32,6 @@
   grid-row: auto;
   justify-self: end;
   align-self: center;
-  padding-top: 51px;
   grid-area: button;
 }
 
@@ -42,15 +40,14 @@
   color: var(--button-color);
 }
 
+.header__theme-menu-item {
+  line-height: 100%;
+}
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-right: 6px;
-}
-
-.header__theme-menu-item {
-  line-height: 100%;
+  gap: 14px;
 }
 
 .decorated-zone::before {
@@ -113,9 +110,11 @@
   font-size: var(--text-size);
   background-color: transparent;
   border: 0;
-  color: var(--button-color);
+  color: var(--active-button-color);
   font-family: var(--accent-family);
   font-weight: normal;
+  cursor: pointer;
+  padding: 2px 13px;
 }
 
 .header__theme-menu-button:focus {
@@ -133,7 +132,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--active-button-color, #FF0070);
 }
 
 .text__link {
@@ -142,7 +141,7 @@
 }
 
 .text__link:hover {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--color-link-visible);
 }
 
 .text__link:focus {
@@ -150,7 +149,7 @@
 }
 
 .text__link:focus-visible {
-  border: 1px solid var(--button-color);
+  border: 1px solid var(--color-link-visible);
 }
 
 .focus {
@@ -174,14 +173,14 @@
   line-height: normal;
   font-family: var(--accent-family);
   color: var(--color-head);
-  block-size: min-content;
-  grid-area: text;
+  margin-block-start: 57px;
 }
 
 .main {
   font-size: inherit;
   display: grid;
-  gap: 30px;
+  gap: 50px;
+  padding: 0px 10px 0px 10px;
 }
 
 .content {
@@ -190,7 +189,6 @@
   line-height: 23.4px;
   display: grid;
   gap: 50px;
-  padding: 10px;
 }
 
 .content-concetration {
@@ -237,11 +235,6 @@
   font-size: var(--text-size);
 }
 
-.concetration__gold-fisch-content {
-  display: grid;
-  gap: 10px;
-}
-
 .text-decoration {
   color: var(--content-text);
 }
@@ -261,7 +254,6 @@
   grid-template-columns: 100%;
   font-weight: 700;
   object-fit: cover;
-  padding: 10px;
 }
 
 .sunset {
@@ -325,7 +317,6 @@
   font-family: var(--accent-family);
   font-weight: bold;
   object-position: center;
-  padding-top: 3px;
   color: var(--header-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
@@ -333,12 +324,15 @@
 @media (width >= 768px) {
   
   .page {
-    gap: 40px;
+    gap: 60px;
   }
 
-  .header { 
-    padding: 10px 0px;
-    gap: 164px;
+  .header {
+    padding: 0px 20px 0px 0px;
+  }
+  
+  .header__theme-menu {
+    margin-block-start: 16px;
   }
 
   .focus-decor {
@@ -350,19 +344,15 @@
     right: 30px;
   }
 
-  .header__theme-menu {
-    padding-right: 25px;
-  }
-
   .decorated-zone::after {
     inset-inline-end: 20px;
     inset-block-start: 20px;
   }
 
   .content {
-    padding: 0;
     gap: 22px;
   }
+
   .decorated-zone::before {
     inset-block-end: 22px;
     inset-inline-start: 21px;
@@ -371,11 +361,11 @@
   .tittle-text {
     max-width: 364px;
     justify-self: flex-end;
-    margin-right: 20px;
+    margin-block-start: 165px;
   }
 
   .main {
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     gap: 80px;
   }
 
@@ -394,9 +384,8 @@
     grid-column-start: span 2;
   }
 
-  .concetration__gold-fisch {
-    padding-top: 57px;
-    display: grid;
+  .concetration__gold-fisch { 
+    padding-top: 57px;  
   }
 
   .gallery_full {
@@ -405,7 +394,6 @@
 
   .gallery__img-full {
     padding-top: 20px;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: 
@@ -424,44 +412,27 @@
     padding-top: 0;
   }
 
-  .header__theme-menu-list {
-    padding-right: 0px;
-    padding-top: 120px;
-  }
-
   .content-concetration {
     grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
-    gap: 20px;
   }
 
 }
 @media (width >= 1024px) {
 
-  .decorated-zone::after {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
-  }
-
-  .decorated-zone::before {
-    inset-block-start: 725px;
-  }
-
   .header {
-    padding: 1px;
     gap: 115px;
+    padding: 0px 0px 10px 0px;
   }
 
   .header__theme-menu {
-    grid-row: auto;
     justify-self: center;
     align-self: start;
-    padding: 10px 0 0 0;
-    margin-block-start: 10px;
+    margin-block-start: 18px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 25px;
+    gap: 12px;
   }
 
   .header__tittle-text {
@@ -474,46 +445,33 @@
 
   .tittle-text {
     max-width: 491px;
+    margin-right: 20px;
+    margin-block-start: 4px;
   }
 
   .content {
-    padding: 10px;
-    padding-top: 5px;
-    gap: 15px;
+    gap: 24px;
   }
 
   .main {
-    padding: 0;
-    padding-top: 38px;
-    gap: 70px;
-    padding-bottom: 59px;
+    padding: 0px 20px 0px 20px;
   }
 
   .page {
-    gap: 0;
+    gap: 58px;
   }
 
   .content-concetration-difficult {
     gap: 18px 32px;
-    padding: 17px 10px 0px 10px;
   }
 
-  .content-concetration-attention {
-    padding: 13px 0px 0px 8px;
-    gap: 8px;
+  .concetrtion__rules {
+    gap: 19px;
   }
 
-  .concetration__gold-fisch {
-    display: grid;
-    padding-left: 10px;
-    padding-right: 12px;
-    padding-top: 62px;
-    gap: 31px;
-  }
-
-  .gallery_full {
-    padding: 0px 21px 0px 20px;
-  }
+  .concetration__gold-fisch { 
+    gap: 31px; 
+  } 
 
   .content__section-quest {
     gap: 11px;
@@ -521,10 +479,6 @@
   }
 
   .section-quest {
-    padding-top: 10px;
-    padding-right: 10px;
-    display: grid;
-    gap: 23px;
     grid-template-columns: repeat(3, 1fr);
   }
   
