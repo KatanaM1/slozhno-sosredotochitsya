@@ -480,4 +480,24 @@
     block-size: min-content;
   }
 
+  .sunset {
+    height: 260px;
+  }
+
+  .icecream {
+    height: 595px;
+  }
+
+  .tape {
+    height: 768px;
+  }
+
+  .book {
+    height: 315px;
+  }
+
+  .street {
+    height: 428px;
+  }
+
 }
