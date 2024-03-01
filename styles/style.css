@@ -479,5 +479,24 @@
   .heading-size {
     block-size: min-content;
   }
+  
+  .sunset {
+    min-height: 260px;
+  }
 
+  .icecream {
+    min-height: 595px;
+  }
+
+  .tape {
+    min-height: 768px;
+  }
+
+  .book {
+    min-height: 315px;
+  }
+
+  .street {
+    min-height: 428px;
+  }
 }
