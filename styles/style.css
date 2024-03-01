@@ -10,7 +10,7 @@
   color: var(--content-text);
   background-color: var(--color-all-body);
   display: grid;
-  gap: 30px;
+  gap: 40px;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -33,7 +33,6 @@
   justify-self: end;
   align-self: center;
   grid-area: button;
-  margin-block-end: 6px;
 }
 
 .header__theme-menu-button {
@@ -58,7 +57,7 @@
   border-left: 1px solid var(--decor-color);
   width: 25px;
   height: 25px;
-  inset-block-end: 20px;
+  inset-block-end: 10px;
   inset-inline-start: 10px;
 }
 
@@ -174,14 +173,14 @@
   line-height: normal;
   font-family: var(--accent-family);
   color: var(--color-head);
-  margin-block-start: 51px;
+  margin-block-start: 55px;
 }
 
 .main {
   font-size: inherit;
   display: grid;
   gap: 50px;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px;
 }
 
 .content {
@@ -282,8 +281,6 @@
   inline-size: 100%;
   block-size: 100%;
   object-position: center;
-  width: 100%;
-  height: 100%;
 }
 
 .gallery__img-full {
@@ -333,7 +330,7 @@
   }
   
   .header__theme-menu {
-    margin-block-start: 23px;
+    margin-block-start: 20px;
   }
 
   .focus-decor {
@@ -351,7 +348,7 @@
   }
 
   .content {
-    gap: 22px;
+    gap: 20px;
   }
 
   .decorated-zone::before {
@@ -366,7 +363,7 @@
   }
 
   .main {
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px;
     gap: 80px;
   }
 
@@ -386,7 +383,7 @@
   }
 
   .concetration__gold-fisch { 
-    padding-top: 57px;  
+    padding-top: 60px;  
   }
 
   .gallery_full {
@@ -452,10 +449,6 @@
 
   .content {
     gap: 24px;
-  }
-
-  .main {
-    padding: 0px 20px 0px 20px;
   }
 
   .page {
